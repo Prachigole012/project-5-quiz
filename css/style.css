@@ -1,0 +1,69 @@
+:root {
+    /* --black: #10100f;
+    --cream: rgb();
+    --gold: #c9a574;
+    --muted: #b9b2a8;
+    --border: #514333; */
+
+    --bs-primary-rgb: 234, 215, 189;
+    /* --bs-btn-bg: 234, 215, 189;
+    --bs-btn-border-color: 234, 215, 189; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #10100f;
+    color: #f4eee5;
+    font-family: "DM Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary {
+    --bs-btn-bg: #c9a574;
+    --bs-btn-border-color: #c9a574;
+}
+
+.btn-primary:hover {
+    background-color: #6f5632;
+    border: #6f5632;
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-14{
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px
+}
+
+.px-10{
+    padding: 9px 80px;
+}
+
+.hero {
+    height: 85vh;
+    background-image: url(https://i.pinimg.com/736x/5a/c5/03/5ac503aa15c374a4eaf78379859d3052.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    height: 85vh;
+    background: linear-gradient(90deg, rgba(12, 12, 11, .98) 0%, rgba(12, 12, 11, .87) 35%, rgba(12, 12, 11, .30) 72%, rgba(12, 12, 11, .18) 100%);
+}
+
+.hero-note {
+    transform: rotate(-8deg);
+}

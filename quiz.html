@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <!-- custome css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar m-2 border-primary border-bottom">
+        <div class="container">
+            <a href="./index.html" class="text-primary fs-4">StyleQuiz<span>✦</span></a>
+            <a href="./index.html" class="text-primary fs-14 ">← Back to Home</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="" id="showdetail">
+
+            <!-- heading -->
+            <div class="mb-3 ">
+                <div class="container">
+                    <div class="row">
+                        <h6 class="fs-14 pt-4 pb-3">STYLE · KNOWLEDGE · YOU</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card -->
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+                                <div class="col-12 col-md-6 col-xl-4 px-3 px-xl-0 card bg-transparent">
+                                    <img alt="" id="cover-img">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="pt-3">
+                                        <p class="fs-14">YOUR NEXT STYLE CHALLENGE</p>
+                                        <h1 class="text-primary"> <span id="quiz_category"></span> <br> <span
+                                                class="fst-italic">Knowledge
+                                                Quiz</span></h2>
+                                            <p class="col-8 col-md-12 fs-14 pt-2" id="quiz-desc"></p>
+                                    </div>
+                                    <div class="d-flex pt-3">
+                                        <p class="">▣ <span id="total-que"></span> Questions</p>
+                                        <p class="ps-4">◷ About <span id="total-time"></span> sec</p>
+                                        <p class="ps-4">✦ Multiple choice</p>
+                                    </div>
+                                    <div class="col-12 pt-4">
+                                        <a class="btn w-100 btn-primary text-black rounded-pill py-2"
+                                            id="start_quiz">Start Quiz →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- questioncard -->
+        <section class="d-none" id="questioncard">
+            <div class="m-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-flex justify-content-between">
+                            <p>Question <span id="current-que"></span> of <span id="que-len"></span></p>
+                            <p id="timer"></p>
+                        </div>
+                        <div class="progress bg-dark p-0" role="progressbar" aria-label="Basic example"
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-primary" style="width: 0%" id="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between flex-column flex-md-row">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 px-4 card bg-transparent">
+                                    <img src="" alt="" class="rounded-3" id="img">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <p class="fs-10">TEST YOUR KNOWLEDGE</p>
+                                    <div>
+                                        <h1 class="text-primary" id="multiple-ques">
+
+                                            </h2>
+                                    </div>
+                                    <div id="opt-btn" class="col-12">
+
+                                    </div>
+                                    <div class=" d-flex me-5">
+                                        <button
+                                            class="btn btn-outline-light rounded-pill border-primary text-primary me-2"
+                                            id="previous">
+                                            ← Previous
+                                        </button>
+                                        <button class="btn btn-primary bg text-black rounded-pill" id="next">
+                                            Next →
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- score-section -->
+        <section class="d-none" id="score-section">
+            <div class="text-center mt-4">
+                <p>YOUR RESULTS ARE IN</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="resultpage">
+                        <div class="col-12 col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+                            <div class="score-section border border-primary rounded-3 p-2 text-primary">
+                                <div class="result-card text-center">
+                                    <div class="pb-3">
+                                        <p class="fw-bold">✦</p>
+                                        <h1>Your Results</h1>
+                                        <p class="fs-15">Keep exploring. There is always more style to discover!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center flex-column text-center m-auto border border-primary rounded-circle p-0"
+                                        style="width: 155px; height: 155px;">
+                                        <div class="">
+                                            <h2> <span id="actual-attempt"></span>/ <span id="total-attempt"></span>
+                                            </h2>
+                                            <p>YOUR ATTEMPT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-detail p-4">
+                                    <div class="d-flex justify-content-between border-bottom border-primary mb-3 p-2">
+                                        <p class="m-0">Correct answers</p>
+                                        <p class="m-0" id="correct"></p>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-bottom border-primary mb-3 p-2">
+                                        <p class="m-0">Incorrect answers</p>
+                                        <p class="m-0" id="wrong"></p>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-bottom border-primary mb-3 p-2">
+                                        <p class="m-0">skip</p>
+                                        <p class="m-0" id="skip"></p>
+                                    </div>
+                                </div>
+                                <div class="text-center me-5 mb-4">
+                                    <button class="btn btn-outline-light rounded-pill border-primary text-primary me-2"
+                                        id="try-again">Try
+                                        Again ↻
+                                    </button>
+                                    <button class="btn btn-primary text-black rounded-pill" id="back-to-home">
+                                        Back to Home
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-bottom fs-10 border-primary border-top mt-3 mt-3">
+                    <div class="d-flex justify-content-between pt-3">
+                        <p class="fs-10">© 2026 StyleQuiz</p>
+                        <p class="text-primary fst-italic fs-14">More quizzes, more you ♡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

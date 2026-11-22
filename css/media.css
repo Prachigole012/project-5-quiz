@@ -1,0 +1,56 @@
+@media (max-width:575px){
+    .hero-content-xs{
+        height: 110vh;
+    }
+    .hero-xs{
+        height: 110vh;
+    }
+}
+
+@media (min-width:576px){
+    .hero-s{
+        height: 110vh;
+    }
+    .hero-content-s{
+        height: 110vh;
+    }
+    .card-s{
+        height: 350px;
+    }
+}
+
+@media (min-width:768px){
+    .hero-md{
+        height: 130vh;
+    }
+    .hero-content-md{
+        height: 130vh;
+    }
+   .card-md{
+    height: 300px;
+   }
+}
+
+@media (min-width:992px){
+    .card-lg{
+        height: 340px;
+    }
+}
+
+@media (min-width:1200px){
+ .card-xl{
+        height: 370px;
+    }
+}
+
+@media (min-width:1400px){
+    .hero{
+        height: 80vh;
+    }
+    .hero-content{
+        height: 80vh;
+    }
+    .card-xxl{
+        height: 330px;
+    }
+}
